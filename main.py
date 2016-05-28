@@ -4,7 +4,13 @@ from v1.thenewboston_api import thenewbostonApi
 API = thenewbostonApi(IP_ADDRESS, PORT, API_TOKEN)
 
 
-def main():
+def adding_data_demo():
+    API.add_major('adminToken', 'Physics', 'physics')
+    API.add_video('adminToken', 2, 3, 'Some Random Title', 'KQzxkeH3ebE')
+    API.add_course('computer-science', 'adminToken', 'Test Category', 'Test Course', 3)
+
+
+def getting_data_demo():
 
     print('\n----- All Majors -----')
     for major in API.get_majors_or_course('majors'):
@@ -20,4 +26,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    adding_data_demo()
+    getting_data_demo()
