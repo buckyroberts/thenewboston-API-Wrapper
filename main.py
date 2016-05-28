@@ -5,8 +5,8 @@ API = thenewbostonApi(IP_ADDRESS, PORT, API_TOKEN)
 
 
 def main():
-    for major in API.get_majors_or_course('majors'):
-        print(major)
+    for video in API.get_videos(1):
+        print(video)
 
 
 """

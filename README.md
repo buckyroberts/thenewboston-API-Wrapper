@@ -5,8 +5,8 @@
 This is a Python wrapper for thenewboston API.
 
 
-### Print a sorted set of all tickers
-`get_majors_or_course()` - this returns an array of all majors or courses for a specific major
+### Get all majors or courses
+`get_majors_or_course()` - returns an array of all majors or courses for a specific major
 
 ```
 def main():
@@ -15,9 +15,25 @@ def main():
 ```
 
 output:
-```json
+```
 {'id': 1, 'slug': 'beauty', 'name': 'Beauty'}
 {'id': 2, 'slug': 'business', 'name': 'Business'}
 {'id': 3, 'slug': 'computer-science', 'name': 'Computer Science'}
 {'id': 4, 'slug': 'cooking', 'name': 'Cooking'}
+```
+
+
+### Get all videos for a course
+`get_majors_or_course()` - returns an array of all videos for a course
+
+```
+def main():
+    for video in API.get_videos(1):
+        print(video)
+```
+
+output:
+```
+{'youtube_code': 'tp3Gw-oWs2k', 'course': 1, 'title': 'Introduction to AJAX', 'episode': 1}
+{'youtube_code': '-1RLW7a8Gr4', 'course': 1, 'title': 'Some Examples of AJAX', 'episode': 2}
 ```
